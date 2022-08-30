@@ -10,7 +10,7 @@ import ProjectImg3 from "../../assets/img/projects/3.png";
 import ProjectImg4 from "../../assets/img/projects/4.png";
 import ProjectImg5 from "../../assets/img/projects/5.png";
 import ProjectImg6 from "../../assets/img/projects/6.png";
-import AddImage2 from "../../assets/img/add/add2.png";
+import AddImage2 from "../../assets/img/worker.jpg";
 
 export default function Projects() {
   return (
@@ -18,35 +18,31 @@ export default function Projects() {
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Projects</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+            <h1 className="font40 extraBold textCenter">DELIGHTFUL ENGINEERING PROJECTS</h1>
+            <p className="font20 textCenter">
+              (Feb 2022 – June 2022)
+
             </p>
           </HeaderInfo>
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg1}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title=" Molding Machine Programming and HMI Designing in Jalal Bottles"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg2}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title=" Calibration, and Commissioning of Thermal Sticker Packing in Shield Pvt Ltd."
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg3}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="Complete Automatic Electrical control of Industrial Curing Oven"
                 action={() => alert("clicked")}
               />
             </div>
@@ -55,51 +51,56 @@ export default function Projects() {
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg4}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="Dryer Machine Automatic Control in Fashion Wear"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg5}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title=" Production Monitoring System in FFC and FFCL"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg6}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="6KW Solar Panel Installation at Orangi Karachi"
                 action={() => alert("clicked")}
               />
             </div>
           </div>
-          <div className="row flexCenter">
+          {/* <div className="row flexCenter">
             <div style={{ margin: "50px 0", width: "200px" }}>
               <FullButton title="Load More" action={() => alert("clicked")} />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
-      <div className="lightBg">
+      {/* <div className="lightBg">
         <div className="container">
           <Advertising className="flexSpaceCenter">
             <AddLeft>
               <AddLeftInner>
                 <ImgWrapper className="flexCenter">
-                  <img className="radius8" src={AddImage2} alt="add" />
+                  <img className="radius8" src={AddImage2} alt="add" style={{width: '426px', height: '607px'}}/>
                 </ImgWrapper>
               </AddLeftInner>
             </AddLeft>
             <AddRight>
-              <h4 className="font15 semiBold">A few words about company</h4>
-              <h2 className="font40 extraBold">A Study of Creativity</h2>
+              <h2 className="font40 extraBold">Mission</h2>
               <p className="font12">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                Delightful Engineering provides all facets of
+                engineering services, sales, and after sales
+                services from project management and
+                conceptual design right the way through to
+                final site commissioning. In addition to this,
+                Delightful Engineering provides a dedicated
+                24x7 support service
+                Delightful Engineering is committed to providing
+                the highest quality products and services
+                exceeding our client’s expectations.
+
               </p>
               <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                 <div style={{ width: "190px" }}>
@@ -112,7 +113,7 @@ export default function Projects() {
             </AddRight>
           </Advertising>
         </div>
-      </div>
+      </div> */}
     </Wrapper>
   );
 }

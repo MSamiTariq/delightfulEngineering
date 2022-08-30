@@ -5,30 +5,40 @@ import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
-import AddImage1 from "../../assets/img/add/1.png";
-import AddImage2 from "../../assets/img/add/2.png";
-import AddImage3 from "../../assets/img/add/3.png";
-import AddImage4 from "../../assets/img/add/4.png";
+import AddImage1 from "../../assets/img/meter.jpg";
+import AddImage2 from "../../assets/img/meter2.jpg";
+import AddImage3 from "../../assets/img/wiring.jpg";
+import AddImage4 from "../../assets/img/tower.jpg";
+import electricalServices from "../../assets/img/electricalServices.jpg";
+import interiorDesigining from "../../assets/img/interiorDesigining.jpg";
+import solarEnergy from '../../assets/img/solarEnergy.jpg';
+import generalSupplies from '../../assets/img/generalSupplies.png';
+import services from '../../assets/img/services.png';
 
 export default function Services() {
   return (
     <Wrapper id="services">
       <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
+          <h1 className="textCenter font30">
+            We deal in sales of these brands
+          </h1>
+
           <ClientSlider />
         </div>
       </div>
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Services</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            <h1 className="font40 extraBold textCenter">Services We Offer</h1>
+            <p className="font20 textCenter">
+              We provide all facets of Electrical and Automation system engineering services
+              from project management and conceptual design right through to final site
+              commissioning
               <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
             </p>
           </HeaderInfo>
-          <ServiceBoxRow className="flex">
+          {/* <ServiceBoxRow className="flex">
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="roller"
@@ -53,24 +63,78 @@ export default function Services() {
             <ServiceBoxWrapper>
               <ServiceBox icon="printer" title="Print" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
             </ServiceBoxWrapper>
-          </ServiceBoxRow>
+          </ServiceBoxRow> */}
+          <div className="flexSpaceCenter serviceContainer">
+            <div className="servicesDiv">
+              <Img src={electricalServices} alt="Electrical Services" />
+              <div style={{ position: 'relative', top: '-180px', color: 'white' }}>
+                <h3 className="textCenter">Electrical Services</h3>
+                <ol style={{ listStyleType: 'lower-roman', position: 'relative', left: '40px' }}>
+                  <li>Industrial</li>
+                  <li>Residential</li>
+                  <li>Commercial</li>
+                </ol>
+              </div>
+            </div>
+
+            <div className="servicesDiv">
+              <Img src={generalSupplies} alt="Electrical Services" />
+              <div style={{ position: 'relative', top: '-180px', color: 'white' }}>
+                <h3 className="textCenter">General Supplies</h3>
+                <ol style={{ listStyleType: 'lower-roman', position: 'relative', left: '40px' }}>
+                  <li>Electrical & Electronics</li>
+                  <li>Industrial Machinery</li>
+                  <li>Safety Gadgets</li>
+                  <li>Hardware & Tools</li>
+                </ol>
+              </div>
+            </div>
+
+            <div className="servicesDiv">
+              <Img src={solarEnergy} alt="Electrical Services" />
+              <div style={{ position: 'relative', top: '-180px', color: 'white' }}>
+                <h3 className="textCenter">
+                  Solar Power Energy
+                </h3>
+                <ol style={{ listStyleType: 'lower-roman', position: 'relative', left: '40px' }}>
+                  <li>5kw Energy Solution</li>
+                  <li>10kw Energy Solution</li>
+                  <li>15kw Energy Solution</li>
+                  <li>20kw Energy Solution</li>
+                </ol>
+              </div>
+            </div>
+
+            <div className="servicesDiv">
+              <Img src={interiorDesigining} alt="Electrical Services" />
+              <div style={{ position: 'relative', top: '-180px', color: 'white' }}>
+                <h3 className="textCenter">Interior Designing</h3>
+                <ol style={{ listStyleType: 'lower-roman', position: 'relative', left: '40px' }}>
+                  <li>Corporate Office</li>
+                  <li>Residential</li>
+                  <li>Commercial</li>
+                </ol>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div className="lightBg">
-          <div className="container">
+        {/* <div className="lightBg" id='aboutus'>
+          <div className="container" style={{ marginTop: '120px' }}>
             <Advertising className="flexSpaceCenter">
               <AddLeft>
                 <h4 className="font15 semiBold">A few words about company</h4>
-                <h2 className="font40 extraBold">A Study of Creativity</h2>
+                <h2 className="font40 extraBold">About Us</h2>
                 <p className="font12">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                  diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                  As an Electrical and Automation company, we
+                  deal in control systems engineering for a
+                  diverse range of hardware platforms. We have
+                  recognized systems integration relationships
+                  with the major PLC, SCADA,and IoT.
                 </p>
-                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
+                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                   <div style={{ width: "190px" }}>
-                    <FullButton title="Get Started" action={() => alert("clicked")} />
-                  </div>
-                  <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <FullButton title="Contact Us" action={() => alert("clicked")} border />
+                    <FullButton title="Contact Us" action={() => alert("Contact No: 03002154848")} />
                   </div>
                 </ButtonsRow>
               </AddLeft>
@@ -78,10 +142,10 @@ export default function Services() {
                 <AddRightInner>
                   <div className="flexNullCenter">
                     <AddImgWrapp1 className="flexCenter">
-                      <img src={AddImage1} alt="office" />
+                      <img src={AddImage1} alt="office" style={{ width: '285px', height: '406px' }} />
                     </AddImgWrapp1>
                     <AddImgWrapp2>
-                      <img src={AddImage2} alt="office" />
+                      <img src={AddImage2} alt="office" style={{ height: '300px' }} />
                     </AddImgWrapp2>
                   </div>
                   <div className="flexNullCenter">
@@ -89,14 +153,14 @@ export default function Services() {
                       <img src={AddImage3} alt="office" />
                     </AddImgWrapp3>
                     <AddImgWrapp4>
-                      <img src={AddImage4} alt="office" />
+                      <img src={AddImage4} alt="office" style={{ height: '150px' }} />
                     </AddImgWrapp4>
                   </div>
                 </AddRightInner>
               </AddRight>
             </Advertising>
           </div>
-        </div>
+        </div> */}
       </div>
     </Wrapper>
   );
@@ -223,4 +287,17 @@ const AddImgWrapp4 = styled.div`
     -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
   }
+`;
+
+const Img = styled.img`
+  filter: brightness(50%);
+  height: 250px;
+  width: 250px;
+  border-radius: 5%;
+  box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+`;
+
+const Img2 = styled.img`
+  height: 50px;
+  width: 50px;
 `;

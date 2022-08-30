@@ -2,12 +2,14 @@ import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 // Assets
-import ClientLogo01 from "../../assets/img/clients/logo01.svg"
-import ClientLogo02 from "../../assets/img/clients/logo02.svg";
-import ClientLogo03 from "../../assets/img/clients/logo03.svg";
-import ClientLogo04 from "../../assets/img/clients/logo04.svg";
-import ClientLogo05 from "../../assets/img/clients/logo05.svg";
-import ClientLogo06 from "../../assets/img/clients/logo06.svg";
+import ClientLogo01 from "../../assets/img/finder.svg"
+import ClientLogo02 from "../../assets/img/mitsubishi.png";
+import ClientLogo03 from "../../assets/img/omron.png";
+import ClientLogo04 from "../../assets/img/pf.png";
+import ClientLogo05 from "../../assets/img/pheonix.png";
+import ClientLogo06 from "../../assets/img/schneider.png";
+import ClientLogo07 from "../../assets/img/siemens.png";
+import ClientLogo08 from "../../assets/img/weintek.png";
 
 export default function ClientSlider() {
   const settings = {
@@ -15,7 +17,7 @@ export default function ClientSlider() {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 2,
-    arrows: false,
+    // arrows: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -72,6 +74,12 @@ export default function ClientSlider() {
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
           <ImgStyle src={ClientLogo02} alt="client logo" />
+        </LogoWrapper>
+        <LogoWrapper className="flexCenter">
+          <ImgStyle src={ClientLogo07} alt="client logo" />
+        </LogoWrapper>
+        <LogoWrapper className="flexCenter">
+          <ImgStyle src={ClientLogo08} alt="client logo" />
         </LogoWrapper>
       </Slider>
     </div>

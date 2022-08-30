@@ -1,16 +1,45 @@
 import React from "react";
 import styled from "styled-components";
+import Typewriter from 'typewriter-effect';
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
 import HeaderImage from "../../assets/img/header-img.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
+import eleEng from '../../assets/img/eleEng.jpg';
+import current from '../../assets/img/current.jpg';
+import board from '../../assets/img/board.jpg';
+import board2 from '../../assets/img/board2.jpg';
+import grids from '../../assets/img/grids.webp';
+import breaker from '../../assets/img/breaker.jpg';
+import meter4 from '../../assets/img/meter4.jpg';
+
+import BackgroundSlider from 'react-background-slider'
+import BackgroundSlideshow from 'react-background-slideshow'
 
 export default function Header() {
   return (
-    <Wrapper id="home" className="container flexSpaceCenter">
-      <LeftSide className="flexCenter">
+    <Wrapper id='home'>
+      {/* <Img src={eleEng}></Img> */}
+      <div style={{ opacity: '0.5', height: '100vh' }}>
+        <BackgroundSlideshow images={[eleEng, meter4, board, grids]} animationDelay={4000} />
+      </div>
+
+      <Content className="content" style={{ zIndex: '99', width: '60vw' }}>
+        Delightful Engineering
+        <div className="font25 darkColor" style={{ marginLeft: '250px' }}>
+          <Typewriter
+            options={{
+              strings: ['Delivering Results', 'Exceeding Expectations...'],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </div>
+
+      </Content>
+      {/* <LeftSide className="flexCenter">
         <div>
           <h1 className="extraBold font60">We are Digital Agency.</h1>
           <HeaderP className="font13 semiBold">
@@ -41,19 +70,30 @@ export default function Header() {
           </DotsWrapper>
         </ImageWrapper>
         <GreyDiv className="lightBg"></GreyDiv>
-      </RightSide>
+      </RightSide> */}
     </Wrapper>
   );
 }
 
 
 const Wrapper = styled.section`
-  padding-top: 80px;
+  // padding-top: 80px;
   width: 100%;
-  min-height: 840px;
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
+`;
+const Content = styled.div`
+  position: absolute;
+  font-size: 60px;
+  font-weight: bold;
+  // top: 40%;
+  // left: 20%;
+//   left:0;
+// right:0;
+// margin-left:auto;
+// margin-right:auto;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
 `;
 const LeftSide = styled.div`
   width: 50%;
@@ -115,10 +155,9 @@ const ImageWrapper = styled.div`
   }
 `;
 const Img = styled.img`
-  @media (max-width: 560px) {
-    width: 80%;
-    height: auto;
-  }
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
 `;
 const QuoteWrapper = styled.div`
   position: absolute;

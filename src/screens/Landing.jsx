@@ -4,8 +4,8 @@ import TopNavbar from "../components/Nav/TopNavbar";
 import Header from "../components/Sections/Header";
 import Services from "../components/Sections/Services";
 import Projects from "../components/Sections/Projects";
-import Blog from "../components/Sections/Blog";
-import Pricing from "../components/Sections/Pricing";
+import Mission from "../components/Sections/Mission";
+import AboutUs from "../components/Sections/AboutUs";
 import Contact from "../components/Sections/Contact";
 import Footer from "../components/Sections/Footer"
 
@@ -15,9 +15,9 @@ export default function Landing() {
       <TopNavbar />
       <Header />
       <Services />
+      <AboutUs />
       <Projects />
-      <Blog />
-      <Pricing />
+      <Mission />
       <Contact />
       <Footer />
     </>
