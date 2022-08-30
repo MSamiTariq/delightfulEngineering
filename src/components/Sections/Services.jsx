@@ -21,7 +21,7 @@ export default function Services() {
       <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
           <h1 className="textCenter font30">
-            We deal in sales of these brands
+            We deals in sales of these brands
           </h1>
 
           <ClientSlider />
