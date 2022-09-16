@@ -76,26 +76,7 @@ export default function AboutUs() {
 const Wrapper = styled.section`
   width: 100%;
 `;
-const ServiceBoxRow = styled.div`
-  @media (max-width: 860px) {
-    flex-direction: column;
-  }
-`;
-const ServiceBoxWrapper = styled.div`
-  width: 20%;
-  margin-right: 5%;
-  padding: 80px 0;
-  @media (max-width: 860px) {
-    width: 100%;
-    text-align: center;
-    padding: 40px 0;
-  }
-`;
-const HeaderInfo = styled.div`
-  @media (max-width: 860px) {
-    text-align: center;
-  }
-`;
+
 const Advertising = styled.div`
   margin: 80px 0;
   padding: 100px 0;
@@ -194,17 +175,4 @@ const AddImgWrapp4 = styled.div`
     -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
   }
-`;
-
-const Img = styled.img`
-  filter: brightness(40%);
-  height: 250px;
-  width: 250px;
-  border-radius: 5%;
-  box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
-`;
-
-const Img2 = styled.img`
-  height: 50px;
-  width: 50px;
 `;
