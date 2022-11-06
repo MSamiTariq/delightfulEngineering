@@ -9,7 +9,6 @@ export default function Contact() {
           <HeaderInfo>
             <h1 className="font40 extraBold">Let's get in touch</h1>
             <p className="font20">
-              Phone: 03492998565, 03322616722 (For Technical Support)<br />
               Whatsapp: 03324379223 (For RFQ)
               <br />
               Email: delightfulengineering@gmail.com
