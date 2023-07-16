@@ -9,8 +9,8 @@ export default function Contact() {
           <HeaderInfo>
             <h1 className="font40 extraBold">Let's get in touch</h1>
             <p className="font20">
-              Whatsapp: 03324379223 (For RFQ)
-              <br />
+              {/* Whatsapp: 03324379223 (For RFQ)
+              <br /> */}
               Email: delightfulengineering@gmail.com
               <br />
               Address: Mezzanine floor, Chase-Up University Road, Opposite to Sir Syed
