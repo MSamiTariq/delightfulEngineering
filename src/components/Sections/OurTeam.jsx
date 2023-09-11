@@ -5,34 +5,24 @@ import FullButton from "../Buttons/FullButton";
 // Assets
 import AddImage2 from "../../assets/img/meter.jpg";
 
-export default function Mission() {
+export default function OurTeam() {
   return (
-    <Wrapper id="mission">
+    <Wrapper id="ourTeam">
       <div className="lightBg">
         <div className="container">
           <Advertising className="flexSpaceCenter">
-            <AddLeft>
-              <AddLeftInner>
-                <ImgWrapper className="flexCenter">
-                  <img className="radius8" src={AddImage2} alt="add" style={{ width: '426px', height: '607px' }} />
-                </ImgWrapper>
-              </AddLeftInner>
-            </AddLeft>
             <AddRight>
-              <h2 className="font40 extraBold">Mission</h2>
-              <p className="font17" style={{ textAlign: 'justify' }}>
-                Delightful Engineering provides all facets of
-                engineering services, sales, and after sales
-                services from project management and
-                conceptual design right the way through to
-                final site commissioning. In addition to this,
-                Delightful Engineering provides a dedicated
-                24x7 support service.
-                We are committed to providing
-                the highest quality products and services
-                exceeding our client’s expectations.
-
+              <h2 className="font40 extraBold">Our Team</h2>
+              <p className="font17" style={{ textAlign: "justify" }}>
+                Delightful Engineering provides all facets of engineering
+                services, sales, and after sales services from project
+                management and conceptual design right the way through to final
+                site commissioning. In addition to this, Delightful Engineering
+                provides a dedicated 24x7 support service. We are committed to
+                providing the highest quality products and services exceeding
+                our client’s expectations.
               </p>
+             
             </AddRight>
           </Advertising>
         </div>
@@ -87,8 +77,7 @@ const AddLeft = styled.div`
   }
 `;
 const AddRight = styled.div`
-  margin: 20px 0;
-  width: 50%;
+  width: 100%;
   @media (max-width: 860px) {
     width: 80%;
     order: 2;

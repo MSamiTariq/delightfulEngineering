@@ -5,47 +5,13 @@ import { Link } from "react-scroll";
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
-import LogoIcon from "../../assets/svg/Logo";
-import logo from "../../assets/img/logo.png";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
-import Lab2Handout from '../../assets/Lab2handout.pdf'
+import CompanyProfile from "../../assets/DE-CompanyProfile.pdf";
+import "./nav.css";
 
 export default function TopNavbar() {
   const [y, setY] = useState(window.scrollY);
   const [sidebarOpen, toggleSidebar] = useState(false);
-
-  const downloadFile = () => {
-    fetch("https://violet-linda-4.tiiny.site", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/pdf",
-      },
-    })
-      .then((response) => response.blob())
-      .then((blob) => {
-        const url = window.URL.createObjectURL(new Blob([blob]));
-
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = "company profile";
-
-        document.body.appendChild(link);
-
-        link.click();
-
-        link.parentNode.removeChild(link);
-      });
-  };
-
-  function handleDownload() {
-    console.log("Hello");
-    const link = document.createElement("a");
-    link.href =
-      "../../assets/Lab2handout.pdf"; // Replace with the actual path to your PDF file
-    link.download = "Lab2handout.pdf"; // Specify the desired filename for the downloaded file
-    link.target = "_blank"; // Open the download in a new tab/window
-    link.click();
-  }
 
   useEffect(() => {
     window.addEventListener("scroll", () => setY(window.scrollY));
@@ -71,9 +37,6 @@ export default function TopNavbar() {
         }
       >
         <NavInner className="container">
-          {/* <Link className="pointer flexNullCenter" to="home" smooth={true}>
-            <Img src={logo}></Img>
-          </Link> */}
           <BurderWrapper
             className="pointer"
             onClick={() => toggleSidebar(!sidebarOpen)}
@@ -105,7 +68,7 @@ export default function TopNavbar() {
                 Services
               </Link>
             </li>
-            <li className="semiBold font20 pointer">
+            <li className="dropdown semiBold font20 pointer">
               <Link
                 activeClass="active"
                 style={{ padding: "10px 15px" }}
@@ -116,59 +79,61 @@ export default function TopNavbar() {
               >
                 About Us
               </Link>
+              <div className="dropdown-content">
+                <Link
+                  activeClass="active"
+                  style={{ padding: "10px 15px" }}
+                  to="directorMessage"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                >
+                  Director's Message
+                </Link>
+                <Link
+                  activeClass="active"
+                  style={{ padding: "10px 15px" }}
+                  to="mission"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                >
+                  Mission
+                </Link>
+                <Link
+                  activeClass="active"
+                  style={{ padding: "10px 15px" }}
+                  to="ourTeam"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                >
+                  Our Team
+                </Link>
+              </div>
             </li>
-
-            <li className="semiBold font20 pointer dropdown">
-              {" "}
-              {/* Add 'dropdown' class here */}
-              <span>About Us</span> {/* Display the dropdown trigger text */}
-              <ul className="dropdown-menu">
-                {" "}
-                {/* Add 'dropdown-menu' class to the nested unordered list */}
-                {/* Add the dropdown menu items */}
-                <li>
-                  <Link
-                    activeClass="active"
-                    style={{ padding: "10px 15px" }}
-                    to="team"
-                    spy={true}
-                    smooth={true}
-                    offset={-80}
-                  >
-                    Our Team
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    activeClass="active"
-                    style={{ padding: "10px 15px" }}
-                    to="history"
-                    spy={true}
-                    smooth={true}
-                    offset={-80}
-                  >
-                    History
-                  </Link>
-                </li>
-                {/* Add more dropdown menu items as needed */}
-              </ul>
-            </li>
-
-            {/* <li className="semiBold font20 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="projects" spy={true} smooth={true} offset={-80}>
-                Projects
-              </Link>
-            </li> */}
             <li className="semiBold font20 pointer">
               <Link
                 activeClass="active"
                 style={{ padding: "10px 15px" }}
-                to="mission"
+                to="clients"
                 spy={true}
                 smooth={true}
                 offset={-80}
               >
-                Mission
+                Clients
+              </Link>
+            </li>
+            <li className="semiBold font20 pointer">
+              <Link
+                activeClass="active"
+                style={{ padding: "10px 15px" }}
+                to="careers"
+                spy={true}
+                smooth={true}
+                offset={-80}
+              >
+                Careers
               </Link>
             </li>
             <li className="semiBold font20 pointer">
@@ -180,26 +145,22 @@ export default function TopNavbar() {
                 smooth={true}
                 offset={-80}
               >
-                Contact
+                Contact Us
               </Link>
             </li>
-            <li onClick={handleDownload} className="semiBold font20 pointer">
-              <Link
-                activeClass="active"
-                style={{ padding: "10px 15px" }}
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-80}
+
+            <li className="semiBold font20 pointer">
+              <a
+                href={CompanyProfile}
+                download="DE-CompanyProfile.pdf" // Specify the file name with extension
+                target="_blank"
+                rel="noreferrer"
               >
                 Company Profile
-              </Link>
+              </a>
             </li>
           </UlWrapper>
         </NavInner>
-        <button onClick={() => downloadFile()}>
-          Download file
-        </button>
       </Wrapper>
     </>
   );

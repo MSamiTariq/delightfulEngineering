@@ -2,16 +2,16 @@ import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 // Assets
-import ClientLogo01 from "../../assets/img/Aspin.jpeg";
-import ClientLogo02 from "../../assets/img/Gatronova.jpeg";
-import ClientLogo03 from "../../assets/img/HiltonPharma.jpeg";
-import ClientLogo04 from "../../assets/img/Krystalite.jpeg";
-import ClientLogo05 from "../../assets/img/PinnacleFibre.jpeg";
-import ClientLogo06 from "../../assets/img/Saami.jpeg";
-import ClientLogo07 from "../../assets/img/shafiGlucoChem.jpeg";
-import ClientLogo08 from "../../assets/img/MatEnergy.jpeg";
+import ClientLogo01 from "../../assets/img/finder.svg";
+import ClientLogo02 from "../../assets/img/mitsubishi.png";
+import ClientLogo03 from "../../assets/img/omron.png";
+import ClientLogo04 from "../../assets/img/pf.png";
+import ClientLogo05 from "../../assets/img/pheonix.png";
+import ClientLogo06 from "../../assets/img/schneider.png";
+import ClientLogo07 from "../../assets/img/siemens.png";
+import ClientLogo08 from "../../assets/img/weintek.png";
 
-export default function ClientSlider() {
+export default function BrandSlider() {
   const settings = {
     infinite: true,
     slidesToShow: 6,

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import ClientSlider from "../Elements/ClientSlider";
+import BrandSlider from "../Elements/BrandSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
@@ -10,58 +10,64 @@ import AddImage2 from "../../assets/img/meter2.jpg";
 import AddImage3 from "../../assets/img/wiring.jpg";
 import AddImage4 from "../../assets/img/tower.jpg";
 import meter3 from "../../assets/img/meter3.jpg";
-import umer from '../../assets/img/umer.jpeg';
+import umer from "../../assets/img/umer.jpeg";
 import panels from "../../assets/img/panels.jpg";
-import electricalServices from "../../assets/img/electricalServices.jpg";
+import vertImg from "../../assets/img/vert-image.jpeg";
 import interiorDesigining from "../../assets/img/interiorDesigining.jpg";
-import solarEnergy from '../../assets/img/solarEnergy.jpg';
-import generalSupplies from '../../assets/img/generalSupplies.png';
-import services from '../../assets/img/services.png';
+import solarEnergy from "../../assets/img/solarEnergy.jpg";
+import generalSupplies from "../../assets/img/generalSupplies.png";
+import services from "../../assets/img/services.png";
 
 export default function AboutUs() {
   return (
     <Wrapper id="aboutus">
       <div className="lightBg">
-        <div className="container" style={{ marginTop: '120px' }}>
+        <div className="container" style={{ marginTop: "120px" }}>
           <Advertising className="flexSpaceCenter">
             <AddLeft>
               <h2 className="font40 extraBold">About Us</h2>
-              <p className="font17" style={{textAlign: 'justify'}}>
-                Delightful Engineering is a customer focused
-                Engineering company specializing in PLC,
-                SCADA, Automation and control electrical
-                engineering, and energy management systems.
-                The business was incorporated in February
-                2022 and is 100% Karachi owned. <br /> <br />
-                As an electrical engineering company, we
-                provide electrical design services to tightly
-                integrate both the electrical infrastructure and
-                control system to ensure the entire electrical
-                system and associated processes function as
-                intended.
+              <p className="font17" style={{ textAlign: "justify" }}>
+                Delightful Engineering is a customer focused Engineering company
+                specializing in PLC, SCADA, Automation and control electrical
+                engineering, and energy management systems. <br /> <br />
+                As an electrical engineering company, we provide electrical
+                design services to tightly integrate both the electrical
+                infrastructure and control system to ensure the entire
+                electrical system and associated processes function as intended.
               </p>
-              <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
-                <div style={{ width: "190px" }}>
-                  <FullButton title="Contact Us" action={() => alert("Email: delightfulengineering@gmail.com")} />
-                </div>
-              </ButtonsRow>
             </AddLeft>
             <AddRight>
               <AddRightInner>
                 <div className="flexNullCenter">
                   <AddImgWrapp1 className="flexCenter">
-                    <img src={umer} alt="office" style={{ width: '240px', height: '406px' }} />
+                    <img
+                      src={vertImg}
+                      alt="office"
+                      style={{ width: "240px", height: "406px" }}
+                    />
                   </AddImgWrapp1>
                   <AddImgWrapp2>
-                    <img src={AddImage2} alt="office" style={{ height: '300px' }} />
+                    <img
+                      src={AddImage2}
+                      alt="office"
+                      style={{ height: "300px" }}
+                    />
                   </AddImgWrapp2>
                 </div>
                 <div className="flexNullCenter">
                   <AddImgWrapp3>
-                    <img src={meter3} alt="office" style={{ height: '130px' }} />
+                    <img
+                      src={meter3}
+                      alt="office"
+                      style={{ height: "130px" }}
+                    />
                   </AddImgWrapp3>
                   <AddImgWrapp4>
-                    <img src={panels} alt="office" style={{ height: '200px' }} />
+                    <img
+                      src={panels}
+                      alt="office"
+                      style={{ height: "200px" }}
+                    />
                   </AddImgWrapp4>
                 </div>
               </AddRightInner>
@@ -96,6 +102,7 @@ const ButtonsRow = styled.div`
   }
 `;
 const AddLeft = styled.div`
+  margin: 40px 0;
   width: 50%;
   p {
     max-width: 475px;

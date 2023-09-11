@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import ClientSlider from "../Elements/ClientSlider";
+import BrandSlider from "../Elements/BrandSlider";
 // Assets
 import electricalServices from "../../assets/img/electricalServices.jpg";
 import interiorDesigining from "../../assets/img/interiorDesigining.jpg";
@@ -17,7 +17,7 @@ export default function Services() {
             We deal in sales of these brands
           </h1>
 
-          <ClientSlider />
+          <BrandSlider />
         </div>
       </div>
       <div className="whiteBg" style={{ padding: "60px 0" }}>
@@ -25,19 +25,27 @@ export default function Services() {
           <HeaderInfo>
             <h1 className="font40 extraBold textCenter">Services We Offer</h1>
             <p className="font20 textCenter">
-              We provide all facets of Electrical and Automation system engineering services
-              from project management and conceptual design right through to final site
-              commissioning
+              We provide all facets of Electrical and Automation system
+              engineering services from project management and conceptual design
+              right through to final site commissioning
               <br />
             </p>
           </HeaderInfo>
-          
+
           <div className="flexSpaceCenter serviceContainer">
             <div className="servicesDiv">
               <Img src={electricalServices} alt="Electrical Services" />
-              <div style={{ position: 'relative', top: '-180px', color: 'white' }}>
+              <div
+                style={{ position: "relative", top: "-180px", color: "white" }}
+              >
                 <h3 className="textCenter">Electrical Services</h3>
-                <ol style={{ listStyleType: 'lower-roman', position: 'relative', left: '40px' }}>
+                <ol
+                  style={{
+                    listStyleType: "lower-roman",
+                    position: "relative",
+                    left: "40px",
+                  }}
+                >
                   <li>Industrial</li>
                   <li>Residential</li>
                   <li>Commercial</li>
@@ -47,9 +55,17 @@ export default function Services() {
 
             <div className="servicesDiv">
               <Img src={generalSupplies} alt="Electrical Services" />
-              <div style={{ position: 'relative', top: '-180px', color: 'white' }}>
+              <div
+                style={{ position: "relative", top: "-180px", color: "white" }}
+              >
                 <h3 className="textCenter">General Supplies</h3>
-                <ol style={{ listStyleType: 'lower-roman', position: 'relative', left: '40px' }}>
+                <ol
+                  style={{
+                    listStyleType: "lower-roman",
+                    position: "relative",
+                    left: "40px",
+                  }}
+                >
                   <li>Electrical & Electronics</li>
                   <li>Industrial Machinery</li>
                   <li>Safety Gadgets</li>
@@ -60,11 +76,17 @@ export default function Services() {
 
             <div className="servicesDiv">
               <Img src={solarEnergy} alt="Electrical Services" />
-              <div style={{ position: 'relative', top: '-180px', color: 'white' }}>
-                <h3 className="textCenter">
-                  Solar Power Energy
-                </h3>
-                <ol style={{ listStyleType: 'lower-roman', position: 'relative', left: '40px' }}>
+              <div
+                style={{ position: "relative", top: "-180px", color: "white" }}
+              >
+                <h3 className="textCenter">Solar Power Energy</h3>
+                <ol
+                  style={{
+                    listStyleType: "lower-roman",
+                    position: "relative",
+                    left: "40px",
+                  }}
+                >
                   <li>5kw Energy Solution</li>
                   <li>10kw Energy Solution</li>
                   <li>15kw Energy Solution</li>
@@ -75,16 +97,23 @@ export default function Services() {
 
             <div className="servicesDiv">
               <Img src={interiorDesigining} alt="Electrical Services" />
-              <div style={{ position: 'relative', top: '-180px', color: 'white' }}>
+              <div
+                style={{ position: "relative", top: "-180px", color: "white" }}
+              >
                 <h3 className="textCenter">Interior Designing</h3>
-                <ol style={{ listStyleType: 'lower-roman', position: 'relative', left: '40px' }}>
+                <ol
+                  style={{
+                    listStyleType: "lower-roman",
+                    position: "relative",
+                    left: "40px",
+                  }}
+                >
                   <li>Corporate Office</li>
                   <li>Residential</li>
                   <li>Commercial</li>
                 </ol>
               </div>
             </div>
-
           </div>
         </div>
       </div>
