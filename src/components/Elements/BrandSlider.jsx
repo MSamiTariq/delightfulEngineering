@@ -63,9 +63,9 @@ export default function BrandSlider() {
         <LogoWrapper className="flexCenter">
           <ImgStyle src={ClientLogo05} alt="client logo" />
         </LogoWrapper>
-        <LogoWrapper className="flexCenter">
+        {/* <LogoWrapper className="flexCenter">
           <ImgStyle src={ClientLogo06} alt="client logo" />
-        </LogoWrapper>
+        </LogoWrapper> */}
         <LogoWrapper className="flexCenter">
           <ImgStyle src={ClientLogo03} alt="client logo" />
         </LogoWrapper>
